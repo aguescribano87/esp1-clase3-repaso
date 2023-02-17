@@ -40,9 +40,9 @@ const Formulario = () => {
                 <img src={entrenador} alt="entrenador" />
                 <span>ENTRENADOR</span>
               </p>
-              <Input isEntrenador={true} name="nombre" label="Nombre" />
-              <Input isEntrenador={true} name="apellido" label="Apellido" />
-              <Input isEntrenador={true} name="email" label="Email" type="email" />
+              <Input name="nombre" label="Nombre" />
+              <Input name="apellido" label="Apellido" />
+              <Input name="email" label="Email" type="email" />
             </div>
             <div>
               <p className="nombre-seccion">
@@ -50,9 +50,6 @@ const Formulario = () => {
                 <span>POKEMON</span>
               </p>
               <Input name="nombrePokemon" label="Nombre" />
-              <Input name="alturaPokemon" label="Altura" />
-              <Input name="tipoPokemon" label="Tipo" />
-              <Input name="edadPokemon" label="Edad" />
             </div>
           </div>
           <Detalle />
