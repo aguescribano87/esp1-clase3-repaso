@@ -1,8 +1,8 @@
 import React from "react";
+import { useStore } from "../../context/ContextoFormulario";
 
 const Detalle = () => {
-  // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
-  // la vista previa.
+  const store = useStore()
 
   return (
     <div className="detalle-formulario">
@@ -12,15 +12,15 @@ const Detalle = () => {
       <section className="datos-cliente">
         <h4>Datos del Entrenador</h4>
         <div className="fila">
-          <p>Nombre:</p>
-          <p>Apellido:</p>
-          <p>Email:</p>
+          <p>Nombre: {store.entrenador?.nombre}</p>
+          <p>Apellido: {store.entrenador?.apellido}</p>
+          <p>Email: {store.entrenador?.email}</p>
         </div>
       </section>
       <section className="datos-cliente">
         <h4>Datos del Pokémon</h4>
         <div className="fila">
-          <p>Nombre:</p>
+          <p>Nombre: {store.pokemon?.nombrePokemon}</p>
         </div>
       </section>
       <button
